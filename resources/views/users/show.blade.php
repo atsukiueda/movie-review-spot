@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <a href="/">HOME</a>
     <div class="text-center">
         <h1>{{ $user->name }}</h1>
     </div>
