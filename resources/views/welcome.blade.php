@@ -21,7 +21,7 @@
                 </div>
             @endif
             
-            {!! link_to_route('movies.index', '映画一覧',  ['class' => 'btn btn-outline-primary btn-lg']) !!}
+            {!! link_to_route('movies.index', '映画一覧', [],  ['class' => 'btn btn-outline-primary btn-lg']) !!}
         </div>
     </div>
 @endsection

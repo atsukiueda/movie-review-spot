@@ -24,9 +24,10 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => 'auth'], function (){
     Route::resource('users', 'UsersController', ['only' => ['show']]);
-    Route::resource('reviews', 'ReviewsController', ['only' => ['store', 'destroy']]);
+    Route::resource('reviews', 'ReviewsController', ['only' => ['store', 'destroy', 'index', 'create']]);
 });
 
 Route::get('movies', 'MoviesController@index')->name('movies.index');
 Route::match(['GET', 'POST'], '/create', 'MoviesController@create')->name('movies.create');
 Route::get('movies/{id}', 'MoviesController@show')->name('movies.show');
+

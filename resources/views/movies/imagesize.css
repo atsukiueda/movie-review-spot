@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+image_size {width: 100px;
+  max-width: 100%;
+  height: auto;
+}
