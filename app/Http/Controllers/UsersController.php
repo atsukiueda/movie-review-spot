@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\Review;
+use App\Movie;
 
 class UsersController extends Controller
 {
@@ -20,5 +21,20 @@ class UsersController extends Controller
         ];
 
         return view('users.show', $data);
+    }
+    
+    public function favorites($id)
+    {
+        $user = User::find($id);
+        $favorites = $user->favorites();
+        
+        $data = [
+            'user' => $user,
+            'movies' => $favorites
+        ];
+        
+        $data += $this->counts($user);
+        
+        return view ('users.favorites', $data);
     }
 }

@@ -12,5 +12,6 @@
         @endforeach
         </div>
         {!! link_to_route('reviews.create', 'レビュー投稿', [ 'movie_id' => $movie->id ],  ['class' => 'btn btn-outline-primary btn-lg']) !!}
-    </div>
+        </div>
+        @include('user_favorite.favorite_button', ['movie' => $movie])
 @endsection

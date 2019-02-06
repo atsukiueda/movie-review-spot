@@ -15,4 +15,9 @@ class Movie extends Model
     public function images() {
         return $this->hasMany(Image::class);
     }
+    
+    public function favorite_users()
+        {
+            return belongsToMany(User::class, 'movie_user', 'movie_id', 'user_id')->withTimestamps();
+        }
 }

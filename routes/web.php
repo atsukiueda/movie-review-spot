@@ -31,3 +31,10 @@ Route::get('movies', 'MoviesController@index')->name('movies.index');
 Route::match(['GET', 'POST'], '/create', 'MoviesController@create')->name('movies.create');
 Route::get('movies/{id}', 'MoviesController@show')->name('movies.show');
 
+Route::group(['prefix' => 'movies/{id}'], function(){
+        Route::post('favorite', 'FavoritesController@store')->name('favorites.favorite');
+        Route::delete('unfavorite', 'FavoritesController@destroy')->name('favorites.unfavorite');
+});
+
+Route::get('fovorites', 'UsersController@favorites')->name('users.favorites');
+
