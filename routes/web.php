@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('ranking', 'RankingController@show')->name('ranking.show');
+
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 
@@ -36,5 +38,9 @@ Route::group(['prefix' => 'movies/{id}'], function(){
         Route::delete('unfavorite', 'FavoritesController@destroy')->name('favorites.unfavorite');
 });
 
-Route::get('fovorites', 'UsersController@favorites')->name('users.favorites');
+
+
+Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
+
+
 

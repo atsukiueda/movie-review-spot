@@ -3,7 +3,7 @@
 @section('content')
     <div class="center jumbotron">
         <div class="text-center">
-            <h1>タイトル</h1>
+            <h1>Movie Review Spot</h1>
         </div>
     </div>
     <div class="row">
@@ -22,6 +22,7 @@
             @endif
             
             {!! link_to_route('movies.index', '映画一覧', [],  ['class' => 'btn btn-outline-primary btn-lg']) !!}
+            {!! link_to_route('ranking.show', '映画ランキング', [],  ['class' => 'btn btn-outline-primary btn-lg']) !!}
         </div>
     </div>
 @endsection

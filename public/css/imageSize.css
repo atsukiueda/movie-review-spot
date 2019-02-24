@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-image_size {width: 100px;
+.image_size img {
+  width: 300px;
   max-width: 100%;
   height: auto;
 }

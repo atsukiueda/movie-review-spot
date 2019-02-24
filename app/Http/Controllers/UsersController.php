@@ -33,7 +33,7 @@ class UsersController extends Controller
             'movies' => $favorites
         ];
         
-        $data += $this->counts($user);
+        
         
         return view ('users.favorites', $data);
     }

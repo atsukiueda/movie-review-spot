@@ -3,18 +3,18 @@
 </div>
 <div class="pt-4">
     @if (count($movies) > 0)
-        <table class="table text-center">
-            <tbody>
-                @foreach ($movies as $movie)
-                    <tr>
-                        <th>タイトル</th>
-                    </tr>
+            <table class="table text-center">
+                <tbody>
+                    @foreach ($movies as $movie)
                         <tr>
-                            <td>{!! link_to_route('movies.show', $movie->title, ['id' => $movie->id]) !!}</td>
+                            <th>タイトル</th>
                         </tr>
-                        
-                @endforeach
-            </tbody>
-        </table>
+                            <tr>
+                                <td>{!! link_to_route('movies.show', $movie->title, ['id' => $movie->id]) !!}</td>
+                            </tr>
+                            
+                    @endforeach
+                </tbody>
+            </table>
     @endif
 </div>

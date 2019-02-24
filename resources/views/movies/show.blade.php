@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="imagesize.css">
+<link rel="stylesheet" href="/css/imageSize.css">
     <div clsss="row">
         <a href="/">HOME</a>
         <h1 class="pb-5">{{ $movie->title }}</h1>
