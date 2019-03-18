@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.jumbotron {
+    background-image: url("../../img/brown0015.png");
+    color: white;
+}
+
+.login {
+    background-image: url("../../img/annie-spratt-294445-unsplash.jpg");
+    background-size: contain;
+}
+
+.register {
+    background-image: url("../../img/miyazakiHKDSCF9763_TP_V.jpg");
+    background-size: cover;
+}

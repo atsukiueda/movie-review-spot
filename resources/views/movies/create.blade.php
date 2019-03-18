@@ -16,7 +16,8 @@
     <input type="text" class="form-control" name="title" value="">
     <br>
     <label for="content">映画の説明:</label>
-    <input type="text" class="form-control" name="content" value="">
+    <br>
+    <textarea name="content" cols="50" rows="5"></textarea>
     <br>
     <label for="image">画像ファイル:</label>
     <input type="file" class="form-control" name="files[][image]" multiple>

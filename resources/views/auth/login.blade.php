@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="css/style.css">
+<div class="login">
     <div class="text-center">
         <h1>ログイン</h1>
     </div>
@@ -23,4 +25,5 @@
             {!! Form::close() !!}
         </div>
     </div>
+</div>
 @endsection

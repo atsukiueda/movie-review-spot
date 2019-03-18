@@ -12,8 +12,16 @@ class MoviesController extends Controller
 {
      public function create(Request $request)
     {
+        
+        
         if ($request->isMethod('POST')) {
             // $movie = Movie::create(['title' => $request->title, 'content' => $request->content]);
+            
+            $this->validate($request, [
+            'title' => 'required',
+            'content' => 'required',
+            'files' => 'required'
+            ]);
             
             $movie = new Movie();
             $movie->title = $request->title;
