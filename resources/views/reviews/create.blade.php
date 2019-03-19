@@ -10,7 +10,7 @@
         {!! form::textarea('content', null,  ['class' => 'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('review_rank', '点数（１〜１００の範囲で点数をつけてください）') !!}
+        {!! Form::label('review_rank', '点数（１〜１００の範囲で点数をつけてください＊半角数字で入力してください）') !!}
         {!! Form::number('review_rank', null,  ['class' => 'form-control']) !!}
     </div>
     {!! Form::submit('投稿', ['class' => 'btn btn-primary btn-block']) !!}
